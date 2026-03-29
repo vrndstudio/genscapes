@@ -31,7 +31,8 @@
         "esbenp.prettier-vscode",
         "streetsidesoftware.code-spell-checker",
         "dsznajder.es7-react-js-snippets",
-        "tailwindlabs.tailwindcss-intellisense"
+        "tailwindlabs.tailwindcss-intellisense",
+        "anthropic.claude-code"
       ]
     }
   }
