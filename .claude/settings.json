@@ -1,0 +1,66 @@
+{
+  "model": "opus",
+  "sandbox": {
+    "enabled": true,
+    "autoAllowBashIfSandboxed": false
+  },
+  "permissions": {
+    "allowedTools": ["Read", "Write"],
+    "allow": [
+      "Bash(ls *)",
+      "Bash(find *)",
+      "Bash(cat *)",
+      "Bash(head *)",
+      "Bash(tail *)",
+      "Bash(grep *)",
+      "Bash(rg *)",
+      "Bash(wc *)",
+      "Bash(mkdir *)",
+      "Bash(touch *)",
+      "Bash(cp *)",
+      "Bash(mv *)",
+      "Bash(rm *)",
+      "Bash(git log *)",
+      "Bash(git status *)",
+      "Bash(git diff *)",
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(git branch *)",
+      "Bash(git checkout *)",
+      "Bash(git switch *)",
+      "Bash(git stash *)",
+      "Bash(pnpm add *)",
+      "Bash(pnpm remove *)",
+      "Bash(pnpm run *)",
+      "Bash(pnpm exec *)",
+      "Bash(npx *)"
+    ],
+    "deny": [
+      "Read(**/.env*)",
+      "Write(**/.env*)",
+      "Read(**/*secret*)",
+      "Write(**/*secret*)",
+      "Read(**/*credentials*)",
+      "Write(**/*credentials*)",
+      "Read(**/.npmrc)",
+      "Write(**/.npmrc)",
+      "Read(**/*.pem)",
+      "Write(**/*.pem)",
+      "Read(**/*.key)",
+      "Write(**/*.key)",
+      "Write(/mnt/c/*)",
+      "Write(production.*)",
+      "Write(**/node_modules/**)",
+      "Bash(rm -rf *)",
+      "Bash(rm -r *)"
+    ]
+  },
+  "env": {
+    "CLAUDE_CODE_ENABLE_TELEMETRY": "0",
+    "DISABLE_TELEMETRY": "1",
+    "CLAUDE_CODE_DISABLE_FEEDBACK_SURVEY": "1",
+    "DISABLE_FEEDBACK_COMMAND": "1",
+    "BASH_DEFAULT_TIMEOUT_MS": "30000",
+    "NODE_ENV": "development"
+  }
+}
